@@ -1,19 +1,30 @@
 package br.com.comcet.tp1;
 
 public enum TokenType {
-    // Literais
+    // Categorias gerais (usadas pelo Scanner)
+    KEYWORD,
+    IDENTIFIER,
+    NUMBER,
+    STRING_LITERAL,
+    OPERATOR,
+    DELIMITER,
+    EOF,
+
+    // Palavras reservadas específicas (usadas pelo Parser)
+    PROGRAM, VAR, BEGIN, END,
+    IF, THEN, ELSE,
+    WHILE, DO,
+    REPEAT, UNTIL,
+    READLN, WRITELN,
+    TRUE, FALSE,
     INTEGER, BOOLEAN, STRING,
-    // Identificadores e palavras reservadas
-    IDENTIFIER, PROGRAM, VAR, BEGIN, END,
-    IF, THEN, ELSE, WHILE, DO, REPEAT, UNTIL,
-    READLN, WRITELN, TRUE, FALSE,
-    // Operadores
+    AND, OR, NOT,
+
+    // Operadores específicos (usados pelo Parser)
     PLUS, MINUS, MULTIPLY, DIVIDE,
     ASSIGN, EQ, NEQ, LT, GT, LEQ, GEQ,
-    AND, OR, NOT,
-    // Símbolos especiais
+
+    // Delimitadores específicos (usados pelo Parser)
     SEMICOLON, COLON, COMMA, DOT,
-    LPAREN, RPAREN,
-    // Controle
-    EOF
+    LPAREN, RPAREN
 }
